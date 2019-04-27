@@ -1,22 +1,5 @@
 ## Switch Firebase project instances for Test / Development / Staging / Production
 
-
-## Related Information
-
-- [Firebase: Environment configuration](https://firebase.google.com/docs/functions/config-env)
-- [Firebase: Separating configuration from code in Admin SDK - Medium](https://medium.com/google-cloud/firebase-separating-configuration-from-code-in-admin-sdk-d2bcd2e87de6)
-
-If you're running a CI Pipeline you might want to have a look at:
-
-- [firebase-ci: A Simplified Firebase interaction for continuous integration](https://github.com/prescottprue/firebase-ci)
-
-- [Firebase Data Within A Team and RTDB](https://tech.residebrokerage.com/firebase-data-within-a-team-fb05c02b184)
-  - Developed [FireAdmin](https://github.com/prescottprue/fireadmin) tool.
-  - [Managing Firebase Data — An Intro To Fireadmin](https://medium.com/@prescottprue/managing-firebase-data-an-intro-to-fireadmin-fb0ecc930d1c)
-
-- [Automatically deploy to Firebase with GitLab CI](https://medium.com/evenbit/automatically-deploy-to-firebase-with-gitlab-ci-546f194c44d8)
-
-
 ## Setup
     
 #### 1. Create a `keys` folder to contain project credentials and ensure it's excluded from GIT source control.
@@ -98,3 +81,19 @@ adminApp.options implements the `AppOptions` interface that server side project 
     httpAgent?: Agent;
   }
 ```
+
+
+## Related Information
+
+- [Firebase: Environment configuration](https://firebase.google.com/docs/functions/config-env)
+- [Firebase: Separating configuration from code in Admin SDK - Medium](https://medium.com/google-cloud/firebase-separating-configuration-from-code-in-admin-sdk-d2bcd2e87de6)
+
+If you're running a CI Pipeline you might want to have a look at:
+
+- [firebase-ci: A Simplified Firebase interaction for continuous integration](https://github.com/prescottprue/firebase-ci)
+
+- [Firebase Data Within A Team and RTDB](https://tech.residebrokerage.com/firebase-data-within-a-team-fb05c02b184)
+  - Developed [FireAdmin](https://github.com/prescottprue/fireadmin) tool.
+  - [Managing Firebase Data — An Intro To Fireadmin](https://medium.com/@prescottprue/managing-firebase-data-an-intro-to-fireadmin-fb0ecc930d1c)
+
+- [Automatically deploy to Firebase with GitLab CI](https://medium.com/evenbit/automatically-deploy-to-firebase-with-gitlab-ci-546f194c44d8)
