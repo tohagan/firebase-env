@@ -4,8 +4,8 @@
     
 1. Create a `keys` folder to contain project credentials and ensure it's excluded from GIT source control.
 
-    $ mkdir ./keys
-    $ echo keys/ >> .gitignore
+       $ mkdir ./keys
+       $ echo keys/ >> .gitignore
     
 2.  Login to Firebase Console and create your Test / Development / Staging / Production projects
 
@@ -15,27 +15,29 @@
     
     Example file names:
     
-    ./keys/myapp-test.json
-    ./keys/myapp-dev.json
-    ./keys/myapp-stage.json
-    ./keys/myapp-prod.json
+       ./keys/myapp-test.json
+       ./keys/myapp-dev.json
+       ./keys/myapp-stage.json
+       ./keys/myapp-prod.json
 
 ![Download Service Key](service-keys.png)
 
 3.  Assign each project a local alias (saved in `.firebaserc` file)
 
-    $ firebase use --add
+        $ firebase use --add
 
 Example `.firebaserc`
 
-    {
-     "projects": {
-       "test": "myapp-test",
-       "dev": "myapp-dev",
-       "stage": "myapp-stage",
-       "prod": "myapp-prod"
-      }
-    }
+```
+{
+ "projects": {
+   "test": "myapp-test",
+   "dev": "myapp-dev",
+   "stage": "myapp-stage",
+   "prod": "myapp-prod"
+  }
+}
+```
 
 4. For CI/CD (Travis/GitLab/CircleCI) you can configure a `$FIREBASE_TOKEN` variable and test script locally
 
