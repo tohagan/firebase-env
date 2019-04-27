@@ -56,7 +56,7 @@ environment variables for this project so must be run with a ". " prefix.
 
         $ . ./firebase-env.sh [test|dev|stage|prod]
 
-This will initialise the following environment variables that match those configured on Firebase Cloud.
+This will set the following environment variables that match those configured on Firebase Cloud.
 
        $GCLOUD_PROJECT
        $GOOGLE_APPLICATION_CREDENTIALS
@@ -71,3 +71,4 @@ import * as admin from 'firebase-admin';
 const adminApp = admin.initializeApp();  
 ```
 
+It will also set `$FIREBASE_TOKEN` for use in CI/CD scripts.
