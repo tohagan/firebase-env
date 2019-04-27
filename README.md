@@ -16,14 +16,14 @@
 
 #### 3.  Generate and download service keys for each project.
 
-    Save each Private Key file as a JSON file under file names that match their respective project-id.
+Save each Private Key file as a JSON file under file names that match their respective project-id.
     
-    Example file names:
+Example file names:
 
-        ./keys/myapp-test.json
-        ./keys/myapp-dev.json
-        ./keys/myapp-stage.json
-        ./keys/myapp-prod.json
+    ./keys/myapp-test.json
+    ./keys/myapp-dev.json
+    ./keys/myapp-stage.json
+    ./keys/myapp-prod.json
 
 ![Download Service Key](service-keys.png)
 
