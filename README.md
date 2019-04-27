@@ -97,3 +97,7 @@ If you're running a CI Pipeline you might want to have a look at:
   - [Managing Firebase Data — An Intro To Fireadmin](https://medium.com/@prescottprue/managing-firebase-data-an-intro-to-fireadmin-fb0ecc930d1c)
 
 - [Automatically deploy to Firebase with GitLab CI](https://medium.com/evenbit/automatically-deploy-to-firebase-with-gitlab-ci-546f194c44d8)
+
+- [Import / Export user accounts into Firebase projects](https://firebase.google.com/docs/cli/auth)
+- [Multi-instance deployment (multiple sites/databases)](https://firebase.google.com/docs/cli/targets)
+- [Firebase Schema Evolution](https://medium.com/@wcandillon/firebase-schema-evolution-ea830a62c14e)
