@@ -44,21 +44,10 @@ Example `.firebaserc`
 }
 ```
 
-#### 5. For CI/CD (Travis/GitLab/CircleCI) you can configure a `$FIREBASE_TOKEN` variable and test script locally
-
-Run this to generate a new CI access token:
-
-    $ firebase login:ci 
-
-This will login to your Firebase account via your browser and eventually display the token to your command console.
-
-Save the token to file `./keys/token`
-
-#### 6. Now use `firebase-env.sh` to switch Firebase projects.
+#### 5. Now use `firebase-env.sh` to switch Firebase projects.
 
 This script runs `firebase use <alias>` and then sets and exports 
 environment variables so must be run with a ". " prefix.
-
 
     $ . ./firebase-env.sh [test|dev|stage|prod]
 
@@ -70,9 +59,7 @@ $GOOGLE_APPLICATION_CREDENTIALS
 $FIREBASE_CONFIG
 ```
 
-It will also set `$FIREBASE_TOKEN` for use in CI/CD scripts.
-
-#### 7. Remove credentials and project specific values from your code.
+#### 6. Remove credentials and project specific values from your code.
 
 Now your Cloud Functions code and CI scripts need not contain any references to credentials or project specific values.
 
