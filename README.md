@@ -4,8 +4,8 @@
     
 1. Create a `keys` folder to contain project credentials and ensure it's excluded from GIT source control.
 
-       $ mkdir ./keys
-       $ echo keys/ >> .gitignore
+        $ mkdir ./keys
+        $ echo keys/ >> .gitignore
     
 2.  Login to Firebase Console and create your Test / Development / Staging / Production projects
 
@@ -14,11 +14,13 @@
     Save each JSON file under file names that match the project-id.
     
     Example file names:
-    
-       ./keys/myapp-test.json
-       ./keys/myapp-dev.json
-       ./keys/myapp-stage.json
-       ./keys/myapp-prod.json
+
+
+        ./keys/myapp-test.json
+        ./keys/myapp-dev.json
+        ./keys/myapp-stage.json
+        ./keys/myapp-prod.json
+
 
 ![Download Service Key](service-keys.png)
 
@@ -43,7 +45,7 @@ Example `.firebaserc`
 
 Run this generated a new CI access token
 
-    $ firebase login:ci 
+        $ firebase login:ci 
 
 Save the token to file `./keys/token`
 
@@ -52,19 +54,20 @@ Save the token to file `./keys/token`
 This script runs `firebase use <alias>` and then exports 
 environment variables for this project so must be run with a ". " prefix.
 
-    $ . ./firebase-env.sh [test|dev|stage|prod]
+        $ . ./firebase-env.sh [test|dev|stage|prod]
 
 This will initialise the following environment variables that match those configured on Firebase Cloud.
 
-    $GCLOUD_PROJECT
-    $GOOGLE_APPLICATION_CREDENTIALS
-    $FIREBASE_CONFIG
+       $GCLOUD_PROJECT
+       $GOOGLE_APPLICATION_CREDENTIALS
+       $FIREBASE_CONFIG
 
 So now in your Cloud Functions code you can just use ...
 
-    import * as admin from 'firebase-admin';
+```
+import * as admin from 'firebase-admin';
 
-    // Uses $GOOGLE_APPLICATION_CREDENTIALS and $FIREBASE_CONFIG
-    const adminApp = admin.initializeApp();  
-
+// Uses $GOOGLE_APPLICATION_CREDENTIALS and $FIREBASE_CONFIG
+const adminApp = admin.initializeApp();  
+```
 
