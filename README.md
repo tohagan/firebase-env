@@ -55,7 +55,7 @@ environment variables for this project so must be run with a ". " prefix.
 
         $ . ./firebase-env.sh [test|dev|stage|prod]
 
-This will set the following environment variables that match those configured on Firebase Functions code.
+This will set the following environment variables that match those pre-configured on Firebase/GCP servers.
 
 ```
 $GCLOUD_PROJECT
@@ -63,13 +63,26 @@ $GOOGLE_APPLICATION_CREDENTIALS
 $FIREBASE_CONFIG
 ```
 
-So now in your Cloud Functions code you can just use ...
+So now your Cloud Functions code should not need to contain any references to credentials or project specific values.
 
 ```
 import * as admin from 'firebase-admin';
 
 // Uses $GOOGLE_APPLICATION_CREDENTIALS and $FIREBASE_CONFIG
 const adminApp = admin.initializeApp();  
+
+// adminApp.options: AppOptions contains all your project settings
+
+  interface AppOptions {
+    credential?: admin.credential.Credential;
+    databaseAuthVariableOverride?: Object;
+    databaseURL?: string;
+    serviceAccountId?: string;
+    storageBucket?: string;
+    projectId?: string;
+    httpAgent?: Agent;
+  }
+
 ```
 
 It will also set `$FIREBASE_TOKEN` for use in CI/CD scripts.
