@@ -4,8 +4,8 @@
     
 #### 1. Create a `keys` folder to contain project credentials and ensure it's excluded from GIT source control.
 
-        $ mkdir ./keys
-        $ echo keys/ >> .gitignore
+    $ mkdir ./keys
+    $ echo keys/ >> .gitignore
     
 #### 2.  Login to Firebase Console and create your Test / Development / Staging / Production projects
 
@@ -24,7 +24,7 @@
 
 #### 4.  Assign each project a local alias (saved in `.firebaserc` file)
 
-        $ firebase use --add
+    $ firebase use --add
 
 Example `.firebaserc`
 
@@ -43,7 +43,7 @@ Example `.firebaserc`
 
 Run this generated a new CI access token
 
-        $ firebase login:ci 
+    $ firebase login:ci 
 
 Save the token to file `./keys/token`
 
@@ -53,7 +53,7 @@ This script runs `firebase use <alias>` and then exports
 environment variables for this project so must be run with a ". " prefix.
 
 
-        $ . ./firebase-env.sh [test|dev|stage|prod]
+    $ . ./firebase-env.sh [test|dev|stage|prod]
 
 This will set the following environment variables that match those pre-configured on Firebase/GCP servers.
 
