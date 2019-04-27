@@ -2,14 +2,14 @@
 
 ## Setup
     
-1. Create a `keys` folder to contain project credentials and ensure it's excluded from GIT source control.
+#### 1. Create a `keys` folder to contain project credentials and ensure it's excluded from GIT source control.
 
         $ mkdir ./keys
         $ echo keys/ >> .gitignore
     
-2.  Login to Firebase Console and create your Test / Development / Staging / Production projects
+#### 2.  Login to Firebase Console and create your Test / Development / Staging / Production projects
 
-3.  Generate and download service keys for each project.
+#### 3.  Generate and download service keys for each project.
 
     Save each Private Key file as a JSON file under file names that match their respective project-id.
     
@@ -22,7 +22,7 @@
 
 ![Download Service Key](service-keys.png)
 
-3.  Assign each project a local alias (saved in `.firebaserc` file)
+#### 4.  Assign each project a local alias (saved in `.firebaserc` file)
 
         $ firebase use --add
 
@@ -39,7 +39,7 @@ Example `.firebaserc`
 }
 ```
 
-4. For CI/CD (Travis/GitLab/CircleCI) you can configure a `$FIREBASE_TOKEN` variable and test script locally
+#### 5. For CI/CD (Travis/GitLab/CircleCI) you can configure a `$FIREBASE_TOKEN` variable and test script locally
 
 Run this generated a new CI access token
 
@@ -65,9 +65,9 @@ $FIREBASE_CONFIG
 
 It will also set `$FIREBASE_TOKEN` for use in CI/CD scripts.
 
-5. Remove credentials and project specific values from your code.
+#### 6. Remove credentials and project specific values from your code.
 
-So now your Cloud Functions code should not need to contain any references to credentials or project specific values.
+Now your Cloud Functions code and CI scripts need not contain any references to credentials or project specific values.
 
 ```
 import * as admin from 'firebase-admin';
