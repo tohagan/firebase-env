@@ -1,4 +1,4 @@
-# Switch Firebase project instances for Test / Development / Staging / Production
+## Switch Firebase project instances for Test / Development / Staging / Production
 
 ## Setup
     
@@ -41,9 +41,11 @@ Example `.firebaserc`
 
 #### 5. For CI/CD (Travis/GitLab/CircleCI) you can configure a `$FIREBASE_TOKEN` variable and test script locally
 
-Run this generated a new CI access token
+Run this to generate a new CI access token:
 
     $ firebase login:ci 
+
+This will login to your Firebase account via your browser and eventually display the token to your command console.
 
 Save the token to file `./keys/token`
 
