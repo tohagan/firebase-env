@@ -1,4 +1,4 @@
-# firebase-env - Switch Firebase project instances for Test / Development / Staging / Production
+# Switch Firebase project instances for Test / Development / Staging / Production
 
 ## Setup
     
