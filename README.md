@@ -63,6 +63,10 @@ $GOOGLE_APPLICATION_CREDENTIALS
 $FIREBASE_CONFIG
 ```
 
+It will also set `$FIREBASE_TOKEN` for use in CI/CD scripts.
+
+5. Remove credentials and project specific values from your code.
+
 So now your Cloud Functions code should not need to contain any references to credentials or project specific values.
 
 ```
@@ -88,4 +92,4 @@ const adminApp = admin.initializeApp();
 
 ```
 
-It will also set `$FIREBASE_TOKEN` for use in CI/CD scripts.
+
