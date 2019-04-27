@@ -11,16 +11,14 @@
 
 3.  Generate and download service keys for each project.
 
-    Save each JSON file under file names that match the project-id.
+    Save each Private Key file as a JSON file under file names that match their respective project-id.
     
     Example file names:
-
 
         ./keys/myapp-test.json
         ./keys/myapp-dev.json
         ./keys/myapp-stage.json
         ./keys/myapp-prod.json
-
 
 ![Download Service Key](service-keys.png)
 
@@ -54,13 +52,16 @@ Save the token to file `./keys/token`
 This script runs `firebase use <alias>` and then exports 
 environment variables for this project so must be run with a ". " prefix.
 
+
         $ . ./firebase-env.sh [test|dev|stage|prod]
 
-This will set the following environment variables that match those configured on Firebase Cloud.
+This will set the following environment variables that match those configured on Firebase Functions code.
 
-       $GCLOUD_PROJECT
-       $GOOGLE_APPLICATION_CREDENTIALS
-       $FIREBASE_CONFIG
+```
+$GCLOUD_PROJECT
+$GOOGLE_APPLICATION_CREDENTIALS
+$FIREBASE_CONFIG
+```
 
 So now in your Cloud Functions code you can just use ...
 
