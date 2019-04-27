@@ -1,5 +1,10 @@
 ## Switch Firebase project instances for Test / Development / Staging / Production
 
+## Related Information
+
+- [Firebase: Environment configuration](https://firebase.google.com/docs/functions/config-env)
+- [Firebase: Separating configuration from code in Admin SDK - Medium](https://medium.com/google-cloud/firebase-separating-configuration-from-code-in-admin-sdk-d2bcd2e87de6)
+
 ## Setup
     
 #### 1. Create a `keys` folder to contain project credentials and ensure it's excluded from GIT source control.
@@ -93,9 +98,3 @@ const adminApp = admin.initializeApp();
   }
 
 ```
-
-## Referencs
-
-- [Firebase: Environment configuration](https://firebase.google.com/docs/functions/config-env)
-- [Firebase: Separating configuration from code in Admin SDK - Medium](https://medium.com/google-cloud/firebase-separating-configuration-from-code-in-admin-sdk-d2bcd2e87de6)
-
