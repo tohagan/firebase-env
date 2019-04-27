@@ -47,7 +47,7 @@ Run this generated a new CI access token
 
 Save the token to file `./keys/token`
 
-## Use `firebase-env.sh` to switch Firebase project.
+#### 6. Use `firebase-env.sh` to switch Firebase project.
 
 This script runs `firebase use <alias>` and then exports 
 environment variables for this project so must be run with a ". " prefix.
@@ -65,7 +65,7 @@ $FIREBASE_CONFIG
 
 It will also set `$FIREBASE_TOKEN` for use in CI/CD scripts.
 
-#### 6. Remove credentials and project specific values from your code.
+#### 7. Remove credentials and project specific values from your code.
 
 Now your Cloud Functions code and CI scripts need not contain any references to credentials or project specific values.
 
