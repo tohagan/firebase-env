@@ -70,6 +70,9 @@ import * as admin from 'firebase-admin';
 
 // Uses $GOOGLE_APPLICATION_CREDENTIALS and $FIREBASE_CONFIG
 const adminApp = admin.initializeApp();  
+```
+
+```
 
 // adminApp.options: AppOptions contains all your project settings
 
