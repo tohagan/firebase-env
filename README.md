@@ -49,15 +49,15 @@ This will login to your Firebase account via your browser and eventually display
 
 Save the token to file `./keys/token`
 
-#### 6. Use `firebase-env.sh` to switch Firebase project.
+#### 6. Now use `firebase-env.sh` to switch Firebase projects.
 
-This script runs `firebase use <alias>` and then exports 
-environment variables for this project so must be run with a ". " prefix.
+This script runs `firebase use <alias>` and then sets and exports 
+environment variables so must be run with a ". " prefix.
 
 
     $ . ./firebase-env.sh [test|dev|stage|prod]
 
-This will set the following environment variables that match those pre-configured on Firebase/GCP servers.
+This will set the following variables that match those pre-configured on Firebase/GCP servers.
 
 ```
 $GCLOUD_PROJECT
@@ -94,4 +94,8 @@ const adminApp = admin.initializeApp();
 
 ```
 
+## Referencs
+
+- [Firebase: Environment configuration](https://firebase.google.com/docs/functions/config-env)
+- [Firebase: Separating configuration from code in Admin SDK - Medium](https://medium.com/google-cloud/firebase-separating-configuration-from-code-in-admin-sdk-d2bcd2e87de6)
 
