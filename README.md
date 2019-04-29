@@ -88,6 +88,8 @@ adminApp.options implements the `AppOptions` interface that server side project 
 - [Firebase: Environment configuration](https://firebase.google.com/docs/functions/config-env)
 - [Firebase: Separating configuration from code in Admin SDK - Medium](https://medium.com/google-cloud/firebase-separating-configuration-from-code-in-admin-sdk-d2bcd2e87de6)
 
+- [Using JSON in config:set](https://github.com/firebase/firebase-tools/issues/406)
+
 If you're running a CI Pipeline you might want to have a look at:
 
 - [firebase-ci: A Simplified Firebase interaction for continuous integration](https://github.com/prescottprue/firebase-ci)
