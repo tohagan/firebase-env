@@ -49,7 +49,7 @@ environment variables so must be run with a ". " prefix.
 This will set the following variables that match those pre-configured on Firebase/GCP servers.
 
 ```
-$GCLOUD_PROJECT
+$GOOGLE_CLOUD_PROJECT
 $GOOGLE_APPLICATION_CREDENTIALS
 $FIREBASE_CONFIG
 ```
