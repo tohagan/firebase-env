@@ -8,21 +8,21 @@
 [ -z "$1" ] || firebase use $1
 
 export FIREBASE_TOKEN=`cat keys/token`
-export GCLOUD_PROJECT=`firebase use`
+export GOOGLE_CLOUD_PROJECT=`firebase use`
 export GOOGLE_APPLICATION_CREDENTIALS=`realpath keys/$GCLOUD_PROJECT.json`
 export FIREBASE_CONFIG=`realpath ./config.json`
 
 ## config.json (add to .gitignore)
 cat >./config.json <<!
 {
-  "databaseURL": "https://${GCLOUD_PROJECT}.firebaseio.com",
-  "projectId": "${GCLOUD_PROJECT}",
-  "storageBucket": "${GCLOUD_PROJECT}.appspot.com"
+  "databaseURL": "https://${GOOGLE_CLOUD_PROJECT}.firebaseio.com",
+  "projectId": "${GOOGLE_CLOUD_PROJECT}",
+  "storageBucket": "${GOOGLE_CLOUD_PROJECT}.appspot.com"
 }
 !
 
 cat <<!
-GCLOUD_PROJECT=$GCLOUD_PROJECT
+GOOGLE_CLOUD_PROJECT=$GOOGLE_CLOUD_PROJECT
 GOOGLE_APPLICATION_CREDENTIALS=$GOOGLE_APPLICATION_CREDENTIALS
 
 FIREBASE_TOKEN set
