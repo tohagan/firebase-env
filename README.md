@@ -65,8 +65,8 @@ import * as admin from 'firebase-admin';
 const adminApp = admin.initializeApp();  
 ```
 
-adminApp.options implements the `AppOptions` interface that server side project settings.
-- `apiKey` and `messagingSenderId` are only required in clietn side apps.
+adminApp.options implements the `AppOptions` interface that intended for server-side services.
+- `apiKey` and `messagingSenderId` are only required in client-side apps.
 
 ```
 // 
